@@ -1,0 +1,108 @@
+$fontlink: "../assets/fonts/";
+
+/* Pretendard-100 */
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""), url("#{$fontlink}Pretendard/Pretendard-Thin.ttf") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-Thin.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-Thin.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Pretendard-300 */
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 300;
+    src: local(""), url("#{$fontlink}Pretendard/Pretendard-Light.woff2") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-Light.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-Light.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Pretendard-400 */
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""), url("#{$fontlink}Pretendard/Pretendard-Regular.woff2") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-Regular.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Pretendard-500 */
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 500;
+    src: local(""), url("#{$fontlink}Pretendard/Pretendard-Medium.woff2") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-Medium.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-Medium.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Pretendard-600 */
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 600;
+    src: local(""), url("#{$fontlink}Pretendard/Pretendard-SemiBold.woff2") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-SemiBold.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-SemiBold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Pretendard-700 */
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 700;
+    src: local(""), url("#{$fontlink}Pretendard/Pretendard-Bold.woff2") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-Bold.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Pretendard-800 */
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 800;
+    src: local(""), url("#{$fontlink}Pretendard/Pretendard-ExtraBold.woff2") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-ExtraBold.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Pretendard/Pretendard-ExtraBold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+/* Montserrat-100 */
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""), url("#{$fontlink}Montserrat/Montserrat-Thin.ttf") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Thin.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Thin.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Montserrat-300 */
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""), url("#{$fontlink}Montserrat/Montserrat-Light.ttf") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Light.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Light.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Montserrat-400 */
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""), url("#{$fontlink}Montserrat/Montserrat-Regular.ttf") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Regular.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Montserrat-500 */
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""), url("#{$fontlink}Montserrat/Montserrat-Medium.ttf") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Medium.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Medium.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Montserrat-600 */
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""), url("#{$fontlink}Montserrat/Montserrat-SemiBold.ttf") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-SemiBold.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-SemiBold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Montserrat-700 */
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""), url("#{$fontlink}Montserrat/Montserrat-Bold.ttf") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Bold.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Bold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Montserrat-800 */
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""), url("#{$fontlink}Montserrat/Montserrat-ExtraBold.ttf") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-ExtraBold.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-ExtraBold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+/* Montserrat-900 */
+@font-face {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""), url("#{$fontlink}Montserrat/Montserrat-Black.ttf") format("woff2"), /* Super Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Black.woff") format("woff"), /* Modern Browsers */ url("#{$fontlink}Montserrat/Montserrat-Black.ttf") format("truetype"); /* Safari, Android, iOS */
+}
