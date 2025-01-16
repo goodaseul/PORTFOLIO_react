@@ -13,10 +13,9 @@ const App: React.FC = () => {
     return (
         <div className="container">
             <Header />
-
             <main>
                 <Routes>
-                    <Route path="/" element={<Home />} /> {/* 기본 페이지 */}
+                    <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/project" element={<Project />} />
                 </Routes>
