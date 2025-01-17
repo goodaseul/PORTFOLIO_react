@@ -12,7 +12,7 @@ import Project from "./pages/Project";
 const App: React.FC = () => {
     const [scrollDown, setScrollDown] = useState(false);
     const headerRef = useRef<HTMLDivElement | null>(null);
-    const footerRef = useRef<HTMLDivElement | null>(null);
+    // const footerRef = useRef<HTMLDivElement | null>(null);
     const lastScrollY = useRef(0); // scroll 위치 추적용 ref
 
     useEffect(() => {
@@ -31,14 +31,16 @@ const App: React.FC = () => {
                     headerRef.current.classList.remove("scroll");
                 }
 
-                if (footerRef.current) {
-                    footerRef.current.classList.add("isEnd");
-                }
-            } else {
-                if (footerRef.current) {
-                    footerRef.current.classList.remove("isEnd");
-                }
+                // if (footerRef.current) {
+                //     footerRef.current.classList.add("isEnd");
+                // }
             }
+
+            // else {
+            //     if (footerRef.current) {
+            //         footerRef.current.classList.remove("isEnd");
+            //     }
+            // }
 
             lastScrollY.current = scrollY; // 현재 scrollY 값을 저장
         };
@@ -66,7 +68,8 @@ const App: React.FC = () => {
                     <Route path="/project" element={<Project />} />
                 </Routes>
             </main>
-            <Footer footerRef={footerRef} />
+            {/* <Footer footerRef={footerRef} /> */}
+            <Footer />
         </div>
     );
 };

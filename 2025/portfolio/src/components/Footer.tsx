@@ -13,7 +13,8 @@ interface IInfo {
 interface IRef {
     footerRef: React.RefObject<HTMLDivElement>;
 }
-const Footer: React.FC<IRef> = ({ footerRef }) => {
+// const Footer: React.FC<IRef> = ({ footerRef }) => {
+const Footer: React.FC = () => {
     const [infoDb, setinfoDb] = useState<IInfo[]>([]);
 
     useEffect(() => {
@@ -35,7 +36,8 @@ const Footer: React.FC<IRef> = ({ footerRef }) => {
     }, []);
 
     return (
-        <footer ref={footerRef}>
+        // <footer ref={footerRef}>
+        <footer>
             <div className="full_inner">
                 {infoDb.map((item) => (
                     <ul key={item.id}>
