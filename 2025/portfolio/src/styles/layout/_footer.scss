@@ -1,0 +1,42 @@
+.container {
+    .full_inner {
+        padding-bottom: 0;
+    }
+    footer {
+        .full_inner {
+            .wrap_menu {
+                color: $bgColor;
+                background: #fff;
+                border-radius: 30px 30px 0 0;
+                padding: 2% 5%;
+                position: fixed;
+                bottom: -100%;
+                transition: position 0.7s;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .menus {
+                    display: flex;
+                    li {
+                        a {
+                            color: $bgColor;
+                        }
+                        + li {
+                            margin-left: 5%;
+                        }
+                        &.active {
+                            color: $pointColor;
+                        }
+                    }
+                }
+            }
+        }
+        &.isEnd {
+            .full_inner {
+                .wrap_menu {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

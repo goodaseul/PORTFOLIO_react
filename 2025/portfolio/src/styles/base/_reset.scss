@@ -3,6 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    &::selection {
+        background-color: $pointColor;
+        color: #fff;
+    }
 }
 
 body {
@@ -11,6 +16,9 @@ body {
     -webkit-font-smoothing: antialiased;
     font-weight: bold;
     width: 100%;
+
+    background-color: $bgColor;
+    color: $txtColor;
 }
 
 a {
@@ -32,4 +40,8 @@ input,
 textarea,
 button {
     font-family: inherit;
+}
+
+img {
+    max-width: 100%;
 }

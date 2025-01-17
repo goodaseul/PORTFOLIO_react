@@ -1,9 +1,11 @@
 import mySelfImage from "/public/images/me.jpg";
 import { TfiArrowCircleDown } from "react-icons/tfi";
 
+import "../styles/page/Home.css";
+
 const Home = () => {
     return (
-        <div className="info">
+        <div className="home">
             <div className="inner">
                 {/* setInterval(() => {
                     

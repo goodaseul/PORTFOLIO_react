@@ -1,0 +1,34 @@
+@import "../base/variable";
+
+.home {
+    .inner {
+        color: $txtColor;
+        position: relative;
+        .wrap_name {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            height: -webkit-fill-available;
+            h2 {
+                font-size: 40px;
+            }
+            .desc {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 50%;
+                text-align: right;
+            }
+        }
+        .wrap_img {
+            position: relative;
+            z-index: -1;
+            width: 50%;
+            margin: 100px auto;
+            overflow: hidden;
+            img {
+                transform: scale(1.5);
+            }
+        }
+    }
+}

@@ -1,18 +1,10 @@
-// src/App.tsx
 import { useEffect, useRef, useState } from "react";
-import { Routes, Route } from "react-router-dom";
-// components
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-// pages
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Project from "./pages/Project";
 
-const App: React.FC = () => {
+import { Link } from "react-router-dom";
+import Menu from "./Menu";
+const Header = () => {
     const [scrollDown, setScrollDown] = useState(false);
     const headerRef = useRef<HTMLDivElement | null>(null);
-    const footerRef = useRef<HTMLDivElement | null>(null);
     const lastScrollY = useRef(0); // scroll 위치 추적용 ref
 
     useEffect(() => {
@@ -29,14 +21,6 @@ const App: React.FC = () => {
             if (scrollY + innerHeight >= scrollHeight) {
                 if (headerRef.current) {
                     headerRef.current.classList.remove("scroll");
-                }
-
-                if (footerRef.current) {
-                    footerRef.current.classList.add("isEnd");
-                }
-            } else {
-                if (footerRef.current) {
-                    footerRef.current.classList.remove("isEnd");
                 }
             }
 
@@ -57,18 +41,17 @@ const App: React.FC = () => {
     }, [scrollDown]);
 
     return (
-        <div className="container">
-            <Header headerRef={headerRef} />
-            <main>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/project" element={<Project />} />
-                </Routes>
-            </main>
-            <Footer footerRef={footerRef} />
-        </div>
+        <header ref={headerRef}>
+            <div className="full_inner">
+                <h1>
+                    <Link to="/">JEONG DASEUL</Link>
+                </h1>
+                <nav>
+                    <Menu />
+                </nav>
+            </div>
+        </header>
     );
 };
 
-export default App;
+export default Header;

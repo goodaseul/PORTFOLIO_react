@@ -1,0 +1,57 @@
+/* App.css */
+.container {
+    // 공통 inner
+    .full_inner {
+        width: 100%;
+        padding: 3%;
+    }
+    // content inner
+    .inner {
+        margin: 0 auto;
+        width: 1280px;
+        padding: 0 $innerSpace;
+    }
+
+    main {
+        padding-top: 260px;
+        overflow: clip;
+    }
+    .menus {
+        li {
+            a {
+                position: relative;
+                &::before {
+                    @include fillBg;
+                }
+            }
+            &.active {
+                transform: skewX(-12deg);
+                a {
+                    &::before {
+                        --max-width: 100%; // hover 시 변수 값 변경
+                        color: $pointColor;
+                    }
+                }
+            }
+        }
+    }
+}
+// pc
+@media screen and (min-width: 1280px) {
+    .container {
+        .menus {
+            li {
+                color: #fff;
+
+                &:hover {
+                    a {
+                        &::before {
+                            --max-width: 100%; // hover 시 변수 값 변경
+                            color: $pointColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

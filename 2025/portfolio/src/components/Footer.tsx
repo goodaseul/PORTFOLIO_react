@@ -10,8 +10,10 @@ interface IInfo {
     portfolio: string;
     tel: number;
 }
-
-const Footer: React.FC = () => {
+interface IRef {
+    footerRef: React.RefObject<HTMLDivElement>;
+}
+const Footer: React.FC<IRef> = ({ footerRef }) => {
     const [infoDb, setinfoDb] = useState<IInfo[]>([]);
 
     useEffect(() => {
@@ -33,7 +35,7 @@ const Footer: React.FC = () => {
     }, []);
 
     return (
-        <footer>
+        <footer ref={footerRef}>
             <div className="full_inner">
                 {infoDb.map((item) => (
                     <ul key={item.id}>
@@ -47,7 +49,7 @@ const Footer: React.FC = () => {
                         )}
                     </ul>
                 ))}
-                <div>
+                <div className="wrap_menu">
                     <Menu />
                     <p>&copy; 2025 JEONGDASEUL React Portfolio</p>
                 </div>

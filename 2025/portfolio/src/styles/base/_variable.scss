@@ -10,26 +10,44 @@ $bgColor: #000;
 $pointColor: #b99dcf;
 $redColor: #c7181f;
 
+$innerSpace: 40px;
+
+@mixin fillBg {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    max-width: 100%;
+    max-width: var(--max-width, 0); // 초기 상태를 변수로 정의
+    white-space: nowrap;
+    transition: all 0.3s;
+}
+body {
+    font-size: 24px;
+}
+
 @media screen and (max-width: 960px) {
     html {
-        font-size: 18px;
+        font-size: 28px;
+    }
+    body {
+        font-size: rem(48px);
     }
 }
 
 @media screen and (max-width: 640px) {
     html {
-        font-size: 16px;
+        font-size: 24px;
     }
 }
 
 @media screen and (max-width: 480px) {
     html {
-        font-size: 14px;
+        font-size: 20px;
     }
 }
 
 @media screen and (max-width: 395px) {
     html {
-        font-size: 12px;
+        font-size: 16px;
     }
 }

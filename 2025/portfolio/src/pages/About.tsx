@@ -22,8 +22,6 @@ interface AboutDocument {
 const About: React.FC = () => {
     const [aboutData, setAboutData] = useState<AboutDocument[]>([]);
 
-    console.log(aboutData);
-
     useEffect(() => {
         const fetchAboutData = async () => {
             try {
