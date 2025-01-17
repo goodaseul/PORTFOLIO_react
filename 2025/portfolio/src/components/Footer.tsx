@@ -10,9 +10,9 @@ interface IInfo {
     portfolio: string;
     tel: number;
 }
-interface IRef {
-    footerRef: React.RefObject<HTMLDivElement>;
-}
+// interface IRef {
+//     footerRef: React.RefObject<HTMLDivElement>;
+// }
 // const Footer: React.FC<IRef> = ({ footerRef }) => {
 const Footer: React.FC = () => {
     const [infoDb, setinfoDb] = useState<IInfo[]>([]);
