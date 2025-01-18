@@ -72,7 +72,6 @@ img {
   max-width: 100%;
 }
 
-/* App.css */
 .container .full_inner {
   width: 100%;
   padding: 3%;
@@ -115,12 +114,26 @@ img {
     color: #b99dcf;
   }
 }
+@media screen and (max-width: 960px) {
+  .container .full_inner {
+    width: 100%;
+    padding: 3%;
+  }
+  .container .inner {
+    width: auto;
+    padding: 0 40px;
+  }
+  .container main {
+    padding-top: 6.25rem;
+  }
+}
 header {
   position: fixed;
   width: 100%;
   left: 0;
   top: 0;
   transition: all 0.7s;
+  z-index: 9;
 }
 header .full_inner {
   display: flex;
@@ -151,8 +164,24 @@ header.scroll .full_inner h1 {
     font-size: 1.333rem;
   }
 }
-.container .full_inner {
+.container footer .full_inner {
+  padding-top: 0;
   padding-bottom: 0;
+  border-top: 3px double #eee;
+}
+.container footer .full_inner .menus {
+  display: flex;
+}
+.container footer .full_inner .menus li + li {
+  margin-left: 5%;
+}
+.container footer .full_inner .menus_info {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: 5%;
+}
+.container footer .full_inner .menus_info li + li {
+  margin-left: 3%;
 }
 .container footer .full_inner .wrap_menu {
   color: #000;
@@ -163,15 +192,16 @@ header.scroll .full_inner h1 {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.container footer .full_inner .wrap_menu .menus {
-  display: flex;
-}
 .container footer .full_inner .wrap_menu .menus li a {
   color: #000;
 }
-.container footer .full_inner .wrap_menu .menus li + li {
-  margin-left: 5%;
-}
-.container footer .full_inner .wrap_menu .menus li.active {
-  color: #b99dcf;
+
+@media screen and (max-width: 960px) {
+  .container footer .full_inner .wrap_menu {
+    display: block;
+  }
+  .container footer .full_inner .wrap_menu p {
+    margin-top: 3%;
+    font-size: 0.625rem;
+  }
 }

@@ -1,5 +1,153 @@
-.todo_container {
-}
+@import "../base/variable";
 
+.about {
+    .full_inner {
+        > div {
+            padding: 3% 6% 3% 2%;
+            border-bottom: 3px double $txtColor;
+            &:last-of-type {
+                border-bottom: none;
+            }
+            h2 {
+                margin-bottom: 2%;
+            }
+        }
+        .wrap_subject {
+            .wrap {
+                div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    margin-top: 2%;
+                    p {
+                        &.period {
+                            width: 20%;
+                        }
+                        &.part {
+                            width: 45%;
+                            padding: 0 7%;
+                        }
+                        &:last-of-type {
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .wrap_skill {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                $area: 2%;
+                li {
+                    width: calc((100% - (#{$area}) * 3) / 4);
+                    height: fit-content;
+                    margin-left: $area;
+                    background-color: rgba(238, 238, 238, 0.1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 2% 0;
+                    margin-top: $area;
+                    border-radius: 10px;
+                    &:nth-of-type(4n + 1) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    .about {
+        .full_inner {
+            > div {
+                padding: 3% 8% 3% 2%;
+            }
+            .wrap_subject {
+                .wrap {
+                    div {
+                        margin-top: 3%;
+                        p {
+                            &.period {
+                                width: 100%;
+                            }
+                            &.part {
+                                padding: 0;
+                                margin-right: 3%;
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+            }
+            .wrap_skill {
+                ul {
+                    $area: 2%;
+                    li {
+                        width: calc((100% - (#{$area}) * 2) / 3);
+                        &:nth-of-type(4n + 1) {
+                            margin-left: $area;
+                        }
+                        &:nth-of-type(3n + 1) {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 960px) {
+    .about {
+        .full_inner {
+            > div {
+                padding: 7% 2%;
+                h2 {
+                    font-size: rem(56px);
+                }
+            }
+            .wrap_subject {
+                &:first-of-type {
+                    padding-top: 0;
+                }
+                .wrap {
+                    div {
+                        padding-left: rem(40px);
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: rem(25px);
+                            width: rem(15px);
+                            height: 2px;
+                            background-color: $pointColor;
+                        }
+                        p {
+                            font-size: rem(40px);
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            .wrap_skill {
+                ul {
+                    li {
+                        margin-left: 0;
+                        width: calc(98% / 2);
+                        font-size: rem(40px);
+                        padding: 3% 0;
+                        &:nth-of-type(4n + 1) {
+                            margin-left: 0;
+                        }
+                        &:nth-of-type(even) {
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

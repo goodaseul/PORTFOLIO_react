@@ -30,17 +30,7 @@ const App: React.FC = () => {
                 if (headerRef.current) {
                     headerRef.current.classList.remove("scroll");
                 }
-
-                // if (footerRef.current) {
-                //     footerRef.current.classList.add("isEnd");
-                // }
             }
-
-            // else {
-            //     if (footerRef.current) {
-            //         footerRef.current.classList.remove("isEnd");
-            //     }
-            // }
 
             lastScrollY.current = scrollY; // 현재 scrollY 값을 저장
         };
@@ -68,7 +58,6 @@ const App: React.FC = () => {
                     <Route path="/project" element={<Project />} />
                 </Routes>
             </main>
-            {/* <Footer footerRef={footerRef} /> */}
             <Footer />
         </div>
     );

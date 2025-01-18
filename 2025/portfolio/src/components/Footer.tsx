@@ -3,6 +3,7 @@ import Menu from "./Menu";
 // db firebase
 import { db } from "../lib/firebase";
 import { collection, getDocs } from "firebase/firestore";
+import { Link } from "react-router-dom";
 interface IInfo {
     id: string; // Firestore 문서 ID
     mail: string;
@@ -10,10 +11,6 @@ interface IInfo {
     portfolio: string;
     tel: number;
 }
-// interface IRef {
-//     footerRef: React.RefObject<HTMLDivElement>;
-// }
-// const Footer: React.FC<IRef> = ({ footerRef }) => {
 const Footer: React.FC = () => {
     const [infoDb, setinfoDb] = useState<IInfo[]>([]);
 
@@ -35,17 +32,24 @@ const Footer: React.FC = () => {
         fetchData();
     }, []);
 
+    const getLinkProps = (key: string, value: string) => {
+        if (key === "Mail") return { to: `mailto:${value}`, target: undefined };
+        if (key === "Tel") return { to: `tel:${value}`, target: undefined };
+        return { to: value, target: "_blank" };
+    };
+
     return (
-        // <footer ref={footerRef}>
         <footer>
             <div className="full_inner">
                 {infoDb.map((item) => (
-                    <ul key={item.id}>
+                    <ul className="menus menus_info" key={item.id}>
                         {Object.entries(item).map(
                             ([key, value]) =>
                                 key !== "id" && ( // id 필드는 제외
                                     <li key={value}>
-                                        {key.charAt(0).toUpperCase() + key.slice(1)} {key === "Mail" ? <a href={`mailto:${value}`}></a> : key === "Tel" ? <a href={`tel:${value}`}></a> : <a href={`${value}`} target="_blank"></a>}
+                                        <Link data-text={key} {...getLinkProps(key, value)}>
+                                            {key.charAt(0).toUpperCase() + key.slice(1)}
+                                        </Link>
                                     </li>
                                 )
                         )}

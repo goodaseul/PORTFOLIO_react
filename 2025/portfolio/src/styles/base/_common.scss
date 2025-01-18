@@ -1,4 +1,3 @@
-/* App.css */
 .container {
     // 공통 inner
     .full_inner {
@@ -52,6 +51,25 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .container {
+        // 공통 inner
+        .full_inner {
+            width: 100%;
+            padding: 3%;
+        }
+        // content inner
+        .inner {
+            width: auto;
+            padding: 0 $innerSpace;
+        }
+
+        main {
+            padding-top: rem(300px);
         }
     }
 }
